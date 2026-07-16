@@ -1,0 +1,24 @@
+{
+    "printer":{
+        "name": "Ender 3 V3 SE",
+        "cost_cop": 3205849,
+        "annual_maintenance_cop": 321199,
+        "estimated_life_years":3,
+        "duty_cycle_percent": 50,
+        "power_consumtion_w": 150,
+        "electricity_cost_cop_kwh": 0.2,
+        "buffer_factor":1.3
+    },
+    "labor":{
+        "rate_cop_hour": 85000,
+        "def_prep_time_mins": 15
+    },
+    "material":{
+        "spool_cost_cop":85000,
+        "default_spool_weight_gr":1000,
+        "effieciency_factor":1.1
+    },
+    "Business":{
+        "profit_margin_percent":40
+    }
+}
