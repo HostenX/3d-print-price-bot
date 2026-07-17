@@ -16,7 +16,7 @@
     "material":{
         "spool_cost_cop":85000,
         "default_spool_weight_gr":1000,
-        "effieciency_factor":1.1
+        "efficiency_factor":1.1
     },
     "Business":{
         "profit_margin_percent":40
