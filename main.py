@@ -1,6 +1,10 @@
 from MakerWorldScrapper import obtain_data
 import json
 from CalcPrice import calculate_final_price
+import os
+import re
+
+
 
 with open('var.json', 'r', encoding="utf-8") as file:
 

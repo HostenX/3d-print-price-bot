@@ -25,7 +25,8 @@ def obtain_data(url):
                 print("Connected to MakerWorld successfully.")
 
                 soup = BeautifulSoup(response.content, "html.parser")
-                title = soup.title.string if soup.title else "Sin título"
+                h1_tag = soup.find("h1")
+                title = h1_tag.get_text(strip=True) if h1_tag else "Sin título"
 
                 connected = True
             elif response.status_code == 403:
@@ -61,7 +62,10 @@ def obtain_data(url):
                 return total_weight_gr, total_print_time_sec, title, time_str
             else:
                 print("No instances found in the design data.")
+                return None, None, None, None
         except json.JSONDecodeError:
             print("Failed to parse JSON data from the script tag.")
+            return None, None, None, None
     else:
         print("No script tag with id '__NEXT_DATA__' found or it is empty.")
+        return None, None, None, None
